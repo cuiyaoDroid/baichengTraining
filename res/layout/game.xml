@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/puzzle_main_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/button_margin"
+        android:layout_marginRight="@dimen/button_margin"
+        android:background="@drawable/head_bg"
+        android:orientation="horizontal" >
+
+        <ProgressBar
+            android:id="@+id/pb_time"
+            style="@style/ProgressBar_Mini"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="5dp"
+            android:progress="100" />
+
+        <Button
+            android:id="@+id/btn_step"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/step_bg"
+            android:gravity="bottom|center_horizontal"
+            android:text="1/8"
+            android:textColor="@color/red" />
+
+        <Button
+            android:id="@+id/btn_score"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginLeft="@dimen/button_margin"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/btn_step"
+            android:background="@drawable/score_bg"
+            android:gravity="bottom|center_horizontal"
+            android:text="123"
+            android:textColor="@color/red" />
+
+        <LinearLayout
+            android:id="@+id/layout_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/clock"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/button_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/rl_find"
+                android:layout_width="55dp"
+                android:layout_height="fill_parent" >
+
+                <ImageView
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginTop="5dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/have_find" />
+
+                <TextView
+                    android:id="@+id/tv_find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/text_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/btn_music"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/btn_music"
+                android:contentDescription="@string/app_name" />
+
+            <ImageButton
+                android:id="@+id/btn_pause"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/btn_pause"
+                android:contentDescription="@string/app_name" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_game"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/button_margin" >
+    </LinearLayout>
+
+</LinearLayout>

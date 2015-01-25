@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+    <!-- 红色 -->
+    <color name="red">#FF0000</color>
+    <!-- 灰色 128,128,128 -->
+    <color name="gray">#808080</color>
+    <!-- 石板灰色  112,128,144 -->
+    <color name="slateGray">#708090</color>
+    <!-- 宝蓝 -->
+    <color name="base_bg_color">#215981</color>
+    <color name="grid_bg_color">#470707</color>
+	<color name="transparent">#00000000</color>
+</resources>
