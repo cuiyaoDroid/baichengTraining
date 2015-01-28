@@ -12,18 +12,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 
+import com.tingshuo.tool.L;
 import com.tingshuo.tool.db.DBHelper;
+import com.tingshuo.web.http.HttpJsonTool;
 
 
 public class InitActivity extends Activity {
 	public static String SDCardRoot = Environment.getExternalStorageDirectory()
 			.getAbsolutePath() + File.separator;
-	public static String RAIL = ".cc_rail";
-
+	public static String RAIL = ".bc_rail";
 	public static void putVersion(String s) {
 		try {
 			FileOutputStream outStream = new FileOutputStream(SDCardRoot + RAIL
-					+ "/12.txt", false);
+					+ "/1.txt", false);
 			OutputStreamWriter writer = new OutputStreamWriter(outStream,
 					"gb2312");
 			writer.write(s);
@@ -89,6 +90,14 @@ public class InitActivity extends Activity {
 		createPath(TrainingApp.appPath);
 		upGradeDBifnessage();
 		putVersion(getString(R.string.version));
+		
+		Bundle bundle = getIntent().getExtras();
+		if(bundle!=null){
+			//TrainingApp.token = bundle.getString("token");
+			HttpJsonTool.ServerUrl = bundle.getString("weburl");
+			//TrainingApp.userId = bundle.getInt("userId");
+		}
+		
 		Intent intent=new Intent(getApplicationContext(),TrainMainActivity.class);
 		startActivityForResult(intent, RESULT_OK);
 		finish();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+<color name="divider_color">#D5D9DF</color>
     <!-- 黑色 -->
     <color name="black">#000000</color>
     <!-- 白色 -->
@@ -15,4 +15,13 @@
     <color name="base_bg_color">#215981</color>
     <color name="grid_bg_color">#470707</color>
 	<color name="transparent">#00000000</color>
+	<color name="transblue">#6042A6E5</color>
+	<color name="trans_white">#60FFFFFF</color>
+    <color name="trans_h_white">#40FFFFFF</color>
+    <color name="txt_color">#353638</color>
+    <color name="touming">#00000000</color>
+    <color name="blue">#004F98</color>
+    <color name="app_bg">#E8E9EC</color>
+    <color name="group_bg_color">#F3F3F3</color>
+   <color name="txt_blue">#0080DA</color>
 </resources>

@@ -30,7 +30,6 @@ import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.util.Log;
 
@@ -44,7 +43,7 @@ public class HttpJsonTool {
 		correct, webfaild, wronginput, correctnoname
 	};
 
-	public static String ServerUrl = "http://v.cc-railway.xzh-soft.com:8083";
+	public static String ServerUrl = "http://115.28.4.107:8280";
 	public static String BUGServerUrl = "http://211.137.14.52:8080";
 	//public static String imgServerUrl = "http://192.168.43.235:9999/";
 	//public static String ServerUrl = "http://192.168.43.235:8888/tingshuo/index.php";
