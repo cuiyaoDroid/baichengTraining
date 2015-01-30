@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class DetailActivity extends BaseSwipeBaceActivity{
+public class RiskDetailActivity extends BaseSwipeBaceActivity{
 	private LinearLayout linear_layout;
-	private static final String[] titles=new String[]{"序号",	"编制部门"
-		,"培训班名称","培训形式","培训类别","培训对象","培训地点","考试时间","培训流程","操作"};
-	private static final String[] contents=new String[]{"1","职教科"
-		,"三新培训","脱产","三新培训","乌兰浩特","学习室","9:00-9:30","三新","<u>查看</u>"};
+	private static final String[] titles=new String[]{	"时间"
+		,"内容","职责","任务"};
+	private static final String[] contents=new String[]{"2015-01-29 10:54:51"
+		,"已启动2级应急预案：防洪应急预案","应急领导组 担任 组员","您的任务是:组员 任务2"};
 	@Override
 	protected void initContentView(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -29,11 +29,11 @@ public class DetailActivity extends BaseSwipeBaceActivity{
 			title.setText(titles[i]);
 			TextView content=(TextView)cell.findViewById(R.id.content);
 			content.setText(Html.fromHtml(contents[i]));
-			if(i==titles.length-1){
+			/*if(i==titles.length-1){
 				content.setClickable(true);
 				content.setTextColor(getResources().getColorStateList(R.color.title_txt_bg));
 				content.setOnClickListener(this);
-			}
+			}*/
 			linear_layout.addView(cell);
 		}
 	}
@@ -56,6 +56,6 @@ public class DetailActivity extends BaseSwipeBaceActivity{
 	protected void initTitleBar(){
 		super.initTitleBar();
 		title_right_btn.setVisibility(View.GONE);
-		image_title.setText("详情");
+		image_title.setText("应急备案");
 	}
 }

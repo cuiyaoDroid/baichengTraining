@@ -91,15 +91,47 @@ public class InitActivity extends Activity {
 		upGradeDBifnessage();
 		putVersion(getString(R.string.version));
 		
-		Bundle bundle = getIntent().getExtras();
-		if(bundle!=null){
+		//Bundle bundle = getIntent().getExtras();
+		int type=getIntent().getIntExtra("type", 0);
+		//if(bundle!=null){
 			//TrainingApp.token = bundle.getString("token");
-			HttpJsonTool.ServerUrl = bundle.getString("weburl");
+			//HttpJsonTool.ServerUrl = bundle.getString("weburl");
 			//TrainingApp.userId = bundle.getInt("userId");
+			//type=bundle.getInt("type");
+		//}
+		//L.i("type  "+type);
+		if(type==0){
+			Intent intent=new Intent(getApplicationContext(),TrainMainActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
+		}else if(type==1) {
+			Intent intent=new Intent(getApplicationContext(),DetailActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
 		}
-		
-		Intent intent=new Intent(getApplicationContext(),TrainMainActivity.class);
-		startActivityForResult(intent, RESULT_OK);
+		else if(type==2) {
+			Intent intent=new Intent(getApplicationContext(),RiskDetailActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
+		}
+		else if(type==3) {
+			Intent intent=new Intent(getApplicationContext(),BlankActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
+		}
+		else if(type==4) {
+			Intent intent=new Intent(getApplicationContext(),DynamicDetailActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
+		}else if(type==5) {
+			Intent intent=new Intent(getApplicationContext(),DynamicReDetailActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
+		}else if(type==6) {
+			Intent intent=new Intent(getApplicationContext(),DynamicPublishActivity.class);
+			intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); 
+			startActivity(intent);
+		}
 		finish();
 		
 	}

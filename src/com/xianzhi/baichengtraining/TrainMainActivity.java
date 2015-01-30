@@ -39,7 +39,7 @@ public class TrainMainActivity extends BaseTitleBarActivity {
 	protected void initTitleBar(){
 		super.initTitleBar();
 		title_right_btn.setVisibility(View.GONE);
-		title_goback_btn.setVisibility(View.GONE);
+		//title_goback_btn.setVisibility(View.GONE);
 	}
 	@Override
 	protected void initContentData() {
@@ -96,7 +96,7 @@ public class TrainMainActivity extends BaseTitleBarActivity {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.goback_btn:
-			
+			finish();
 			break;
 
 		default:

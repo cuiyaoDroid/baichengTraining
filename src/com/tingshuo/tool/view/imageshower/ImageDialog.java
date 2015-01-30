@@ -77,11 +77,6 @@ public class ImageDialog extends BaseTitleBarActivity implements singleTapListen
 			isScale = false;
 			beforeLenght = 0.0f;
 			afterLenght = 0.0f;
-			if(position==1){
-				image_title.setText("模块化培训");
-			}else {
-				image_title.setText("培训流程");
-			}
 		}
 
 		@Override
